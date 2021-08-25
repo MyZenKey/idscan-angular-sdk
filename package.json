@@ -1,5 +1,5 @@
 {
-  "name": "idscan-angular-sdk",
+  "name": "@MyZenKey/idscan-angular-sdk",
   "version": "1.0.0",
   "author": "Alex Rosa <alex.rosa@myzenkey.com>",
   "license": "",
@@ -8,6 +8,12 @@
     "@angular/common": ">=8.0.0",
     "axios": "0.21.1",
     "tslib": "^2.0.0"
+  },
+  "repository": {
+  "url": "git://github.com/MyZenKey/idscan-angular-sdk.git"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   },
   "main": "bundles/idscan-angular-sdk.umd.js",
   "module": "fesm5/idscan-angular-sdk.js",
