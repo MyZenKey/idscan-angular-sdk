@@ -1,10 +1,19 @@
-Project Must be Angular Version 8 or newer
+ZenKey
 
-// if axios is not already installed, run
-npm install axios@0.21.1
+ZenKey SDKs and Web Integrations.
+ZenKey SDKs (iOS and Android) and web integrations provide effective resources for you as a service provider to authenticate users accessing your apps with their mobile device or web browser. There are several resources you can access to get started integrating your apps with ZenKey.
 
-//then 
-npm install git+https://git.xcijv.net/xcjiv/idscan-ts-sdk.git#develop
+Try It Out
+Note : Must Use Angular Version 8 or newer
+run: 
+npm install axios@0.21.1 
+npm install @myzenkey/idscan-angular-sdk
 
-//Import PayloadService into the file that requires it, make sure declare as a provider 
-//and you are good to go
+add:
+Import {PayloadService} from '@myzenkey/idscan-angular-sdk'
+into the files that require it, declare PayloadService as a provider in app.module.ts
+
+PayloadService Functions:
+
+getSessionId(CorrelationID, ClientID)- retrieves a saved session id for proofing data, takes a correlation id and the client id as parameters 
+getStoredData(SessionID)- retrieves data on OneKosmos related to the sessionID passed as a parameter
