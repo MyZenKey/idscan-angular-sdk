@@ -11,7 +11,7 @@ export class PayloadService {
      */
     getSessionId(correlation_id, client_id) {
         return __awaiter(this, void 0, void 0, function* () {
-            const url = `https://idscan-qa.xcijv.com/auth/lookupSessionId/?correlation_id=${correlation_id}&client_id=${client_id}`;
+            const url = `https://idscan.xcijv.com/auth/lookupSessionId/?correlation_id=${correlation_id}&client_id=${client_id}`;
             const retRep = yield axios.get(`${url}`)
                 .then(data => {
                 if (!!data) {
@@ -32,7 +32,7 @@ export class PayloadService {
             // const licenseKey = '5809b7b7-886f-4c88-9061-59a2baf485be';
             // const licenseKey_pilot = 'c77aa0ce-f00d-4843-86a9-38e6c1bf7d8e';
             //return `{“first_name“:“Ben“, “last_name“:“Dover“, “last_4_social” :“3844“}`;
-            const url = `https://idscan-qa.xcijv.com/auth/getDataWithSessionId/`;
+            const url = `https://idscan.xcijv.com/auth/getDataWithSessionId/`;
             const retRep = yield axios.get(`${url}?session_id=${sessionId}&ppk=${publicKeyProvided}`)
                 .then(data => {
                 console.log('GetCall :' + data.data.message.payloadData);
