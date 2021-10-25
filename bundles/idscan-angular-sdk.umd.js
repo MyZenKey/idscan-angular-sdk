@@ -260,7 +260,7 @@
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0:
-                            url = "https://idscan.xcijv.com/auth/lookupSessionId/?correlation_id=" + correlation_id + "&client_id=" + client_id;
+                            url = "https://idscan-qa.xcijv.com/auth/lookupSessionId/?correlation_id=" + correlation_id + "&client_id=" + client_id;
                             return [4 /*yield*/, axios.get("" + url)
                                     .then(function (data) {
                                     if (!!data) {
@@ -284,11 +284,11 @@
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0:
-                            url = "https://idscan.xcijv.com/auth/getDataWithSessionId/";
+                            url = "https://idscan-qa.xcijv.com/auth/getDataWithSessionId/";
                             return [4 /*yield*/, axios.get(url + "?session_id=" + sessionId + "&ppk=" + publicKeyProvided)
                                     .then(function (data) {
                                     console.log('GetCall :' + data.data.message.payloadData);
-                                    var proof = data.data.message.payloadData.data;
+                                    var proof = data.data.message.payloadData;
                                     return proof;
                                 }).catch(function (error) {
                                     console.log(error);
