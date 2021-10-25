@@ -1,6 +1,6 @@
 {
   "name": "@myzenkey/idscan-angular-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Alex Rosa <alex.rosa@myzenkey.com>",
   "license": "",
   "peerDependencies": {
