@@ -7,5 +7,6 @@ export declare class PayloadService {
      */
     getSessionId(correlation_id: string, client_id: string): Promise<AxiosResponse<any> | string>;
     getStoredData(sessionId: string, publicKeyProvided: string): Promise<AxiosResponse<any> | string>;
+    getStoredDataWithKeys(sessionId: string, publicKeyProvided: string): Promise<AxiosResponse<any> | string>;
     Printer(): string;
 }

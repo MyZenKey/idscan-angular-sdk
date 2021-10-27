@@ -35,9 +35,27 @@ class PayloadService {
             const url = `https://idscan-qa.xcijv.com/auth/getDataWithSessionId/`;
             const retRep = yield axios.get(`${url}?session_id=${sessionId}&ppk=${publicKeyProvided}`)
                 .then(data => {
-                console.log('GetCall :' + data.data.message.payloadData);
                 const proof = data.data.message.payloadData;
                 return proof;
+            }).catch(error => {
+                console.log(error);
+                return error;
+            });
+            return retRep;
+        });
+    }
+    getStoredDataWithKeys(sessionId, publicKeyProvided) {
+        return __awaiter(this, void 0, void 0, function* () {
+            // let sp_pub = 'PSJ1sEgVCWRmvZ4TkyBGoyieXl9p852LcejD5fOHUxBJV4Q8Z5a6i+VltTJUsfzmuTkDn5+846OIXpjp+7VE4A==';
+            // let sp_pr = 'ULcYSfv+5etTqBr2RxEF9HSJ33uJlkep9EL4+xzsWkI=';
+            // const licenseKey = '5809b7b7-886f-4c88-9061-59a2baf485be';
+            // const licenseKey_pilot = 'c77aa0ce-f00d-4843-86a9-38e6c1bf7d8e';
+            //return `{“first_name“:“Ben“, “last_name“:“Dover“, “last_4_social” :“3844“}`;
+            const url = `https://idscan-qa.xcijv.com/auth/getDataWithSessionIdPrivateKeyPubKey/`;
+            const retRep = yield axios.get(`${url}?session_id=${sessionId}&sp_publicKey=${publicKeyProvided}&sp_privateKey=${publicKeyProvided}`)
+                .then(data => {
+                const payload = data.data.message.payloadData;
+                return payload;
             }).catch(error => {
                 console.log(error);
                 return error;
