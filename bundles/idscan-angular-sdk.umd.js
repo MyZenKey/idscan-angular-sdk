@@ -300,14 +300,14 @@
                 });
             });
         };
-        PayloadService.prototype.getStoredDataWithKeys = function (sessionId, publicKeyProvided) {
+        PayloadService.prototype.getStoredDataWithKeys = function (sessionId, privateKeyProvided, publicKeyProvided) {
             return __awaiter(this, void 0, void 0, function () {
                 var url, retRep;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0:
                             url = "https://idscan-qa.xcijv.com/auth/getDataWithSessionIdPrivateKeyPubKey/";
-                            return [4 /*yield*/, axios.get(url + "?session_id=" + sessionId + "&sp_publicKey=" + publicKeyProvided + "&sp_privateKey=" + publicKeyProvided)
+                            return [4 /*yield*/, axios.get(url + "?session_id=" + sessionId + "&sp_publicKey=" + publicKeyProvided + "&sp_privateKey=" + privateKeyProvided)
                                     .then(function (data) {
                                     var payload = data.data.message.payloadData;
                                     return payload;
@@ -321,9 +321,6 @@
                     }
                 });
             });
-        };
-        PayloadService.prototype.Printer = function () {
-            return 'It Works!!!';
         };
         PayloadService.ɵprov = core["ɵɵdefineInjectable"]({ factory: function PayloadService_Factory() { return new PayloadService(); }, token: PayloadService, providedIn: "root" });
         PayloadService.decorators = [
