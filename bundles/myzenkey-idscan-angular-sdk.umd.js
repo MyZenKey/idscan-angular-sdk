@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('axios')) :
-    typeof define === 'function' && define.amd ? define('idscan-angular-sdk', ['exports', '@angular/core', 'axios'], factory) :
-    (global = global || self, factory(global['idscan-angular-sdk'] = {}, global.ng.core, global.axios));
+    typeof define === 'function' && define.amd ? define('@myzenkey/idscan-angular-sdk', ['exports', '@angular/core', 'axios'], factory) :
+    (global = global || self, factory((global.myzenkey = global.myzenkey || {}, global.myzenkey['idscan-angular-sdk'] = {}), global.ng.core, global.axios));
 }(this, (function (exports, core, axios) { 'use strict';
 
     axios = axios && axios.hasOwnProperty('default') ? axios['default'] : axios;
@@ -306,6 +306,13 @@
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0:
+                            // let sp_pub = 'PSJ1sEgVCWRmvZ4TkyBGoyieXl9p852LcejD5fOHUxBJV4Q8Z5a6i+VltTJUsfzmuTkDn5+846OIXpjp+7VE4A==';
+                            // let sp_pr = 'ULcYSfv+5etTqBr2RxEF9HSJ33uJlkep9EL4+xzsWkI=';
+                            // const licenseKey = '5809b7b7-886f-4c88-9061-59a2baf485be';
+                            // const licenseKey_pilot = 'c77aa0ce-f00d-4843-86a9-38e6c1bf7d8e';
+                            //return `{“first_name“:“Ben“, “last_name“:“Dover“, “last_4_social” :“3844“}`;
+                            publicKeyProvided = encodeURIComponent(publicKeyProvided);
+                            privateKeyProvided = encodeURIComponent(privateKeyProvided);
                             url = "https://idscan-qa.xcijv.com/auth/getDataWithSessionIdPrivateKeyPubKey/";
                             return [4 /*yield*/, axios.get(url + "?session_id=" + sessionId + "&sp_publicKey=" + publicKeyProvided + "&sp_privateKey=" + privateKeyProvided)
                                     .then(function (data) {
@@ -337,4 +344,4 @@
     Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
-//# sourceMappingURL=idscan-angular-sdk.umd.js.map
+//# sourceMappingURL=myzenkey-idscan-angular-sdk.umd.js.map

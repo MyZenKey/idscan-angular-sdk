@@ -1,6 +1,6 @@
 {
   "name": "@myzenkey/idscan-angular-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Alex Rosa <alex.rosa@myzenkey.com>",
   "license": "",
   "peerDependencies": {
@@ -11,18 +11,18 @@
   },
   "repository": {
     "url": "git://github.com/MyZenKey/idscan-angular-sdk.git"
-    },
-    "publishConfig": {
-      "registry":"https://npm.pkg.github.com"
-    },
-  "main": "bundles/idscan-angular-sdk.umd.js",
-  "module": "fesm5/idscan-angular-sdk.js",
-  "es2015": "fesm2015/idscan-angular-sdk.js",
-  "esm5": "esm5/idscan-angular-sdk.js",
-  "esm2015": "esm2015/idscan-angular-sdk.js",
-  "fesm5": "fesm5/idscan-angular-sdk.js",
-  "fesm2015": "fesm2015/idscan-angular-sdk.js",
-  "typings": "idscan-angular-sdk.d.ts",
-  "metadata": "idscan-angular-sdk.metadata.json",
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "main": "bundles/myzenkey-idscan-angular-sdk.umd.js",
+  "module": "fesm5/myzenkey-idscan-angular-sdk.js",
+  "es2015": "fesm2015/myzenkey-idscan-angular-sdk.js",
+  "esm5": "esm5/myzenkey-idscan-angular-sdk.js",
+  "esm2015": "esm2015/myzenkey-idscan-angular-sdk.js",
+  "fesm5": "fesm5/myzenkey-idscan-angular-sdk.js",
+  "fesm2015": "fesm2015/myzenkey-idscan-angular-sdk.js",
+  "typings": "myzenkey-idscan-angular-sdk.d.ts",
+  "metadata": "myzenkey-idscan-angular-sdk.metadata.json",
   "sideEffects": false
 }

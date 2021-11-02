@@ -51,6 +51,8 @@ class PayloadService {
             // const licenseKey = '5809b7b7-886f-4c88-9061-59a2baf485be';
             // const licenseKey_pilot = 'c77aa0ce-f00d-4843-86a9-38e6c1bf7d8e';
             //return `{“first_name“:“Ben“, “last_name“:“Dover“, “last_4_social” :“3844“}`;
+            publicKeyProvided = encodeURIComponent(publicKeyProvided);
+            privateKeyProvided = encodeURIComponent(privateKeyProvided);
             const url = `https://idscan-qa.xcijv.com/auth/getDataWithSessionIdPrivateKeyPubKey/`;
             const retRep = yield axios.get(`${url}?session_id=${sessionId}&sp_publicKey=${publicKeyProvided}&sp_privateKey=${privateKeyProvided}`)
                 .then(data => {
@@ -77,4 +79,4 @@ PayloadService.ctorParameters = () => [];
  */
 
 export { PayloadService };
-//# sourceMappingURL=idscan-angular-sdk.js.map
+//# sourceMappingURL=myzenkey-idscan-angular-sdk.js.map

@@ -62,6 +62,13 @@ var PayloadService = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
+                        // let sp_pub = 'PSJ1sEgVCWRmvZ4TkyBGoyieXl9p852LcejD5fOHUxBJV4Q8Z5a6i+VltTJUsfzmuTkDn5+846OIXpjp+7VE4A==';
+                        // let sp_pr = 'ULcYSfv+5etTqBr2RxEF9HSJ33uJlkep9EL4+xzsWkI=';
+                        // const licenseKey = '5809b7b7-886f-4c88-9061-59a2baf485be';
+                        // const licenseKey_pilot = 'c77aa0ce-f00d-4843-86a9-38e6c1bf7d8e';
+                        //return `{“first_name“:“Ben“, “last_name“:“Dover“, “last_4_social” :“3844“}`;
+                        publicKeyProvided = encodeURIComponent(publicKeyProvided);
+                        privateKeyProvided = encodeURIComponent(privateKeyProvided);
                         url = "https://idscan-qa.xcijv.com/auth/getDataWithSessionIdPrivateKeyPubKey/";
                         return [4 /*yield*/, axios.get(url + "?session_id=" + sessionId + "&sp_publicKey=" + publicKeyProvided + "&sp_privateKey=" + privateKeyProvided)
                                 .then(function (data) {
@@ -93,4 +100,4 @@ var PayloadService = /** @class */ (function () {
  */
 
 export { PayloadService };
-//# sourceMappingURL=idscan-angular-sdk.js.map
+//# sourceMappingURL=myzenkey-idscan-angular-sdk.js.map
